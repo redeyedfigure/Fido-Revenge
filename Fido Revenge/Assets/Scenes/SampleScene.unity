@@ -397,7 +397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f8ddaf6c9b31fa4ca40f4cd5755e619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 200
+  mouseSensitivity: 300
   playerBody: {fileID: 1144353970}
 --- !u!1 &1144353969
 GameObject:
@@ -468,7 +468,7 @@ MonoBehaviour:
   controller: {fileID: 1144353971}
   speed: 10
   gravity: -9.81
-  jumpForce: 4
+  jumpForce: 3
   groundCheck: {fileID: 1180351534}
   groundDistance: 0.4
   groundMask:
@@ -517,7 +517,7 @@ GameObject:
   - component: {fileID: 2141950912}
   - component: {fileID: 2141950911}
   - component: {fileID: 2141950910}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
