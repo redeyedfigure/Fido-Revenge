@@ -48,6 +48,5 @@ public class PlayerAttributes : MonoBehaviour
 
         roundedHealth = System.Math.Round(health, 2);
         healthCount = roundedHealth.ToString();
-        Debug.Log(roundedHealth);
     }
 }
