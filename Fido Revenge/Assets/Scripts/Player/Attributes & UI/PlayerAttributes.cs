@@ -1,11 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAttributes : MonoBehaviour
 {
-    public float health;
+    public double health;
     public float armor;
+
+    //Visualization Necessities
+    [System.NonSerialized]
+    public string healthCount;
+    private double roundedHealth;
 
     // This variable is just for use in making a massive health drop every 5 seconds. You can
     // remove this if you want, just make sure to remove lines 37-40 with it.
@@ -39,5 +45,9 @@ public class PlayerAttributes : MonoBehaviour
             armor -= 20;
             secondsSinceLastSpike -= 5;
         }
+
+        roundedHealth = System.Math.Round(health, 2);
+        healthCount = roundedHealth.ToString();
+        Debug.Log(roundedHealth);
     }
 }
