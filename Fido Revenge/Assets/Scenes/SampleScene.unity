@@ -386,7 +386,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 3.1999989, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &523632500
 MonoBehaviour:
@@ -473,7 +473,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 30
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 29
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -812,7 +812,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 3, y: 40}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &947608075
 MonoBehaviour:
@@ -1225,6 +1225,7 @@ MonoBehaviour:
   healthFillSlider: {fileID: 1822350361}
   healthInterpSlider: {fileID: 899386966}
   armorFillSlider: {fileID: 523632502}
+  armorFillImage: {fileID: 947608075}
   playerAttributes: {fileID: 1144353973}
 --- !u!114 &1822350361
 MonoBehaviour:
