@@ -7,8 +7,8 @@ public class PlayerAttributes : MonoBehaviour
     public float health;
     public float armor;
 
-    // This variable is just for use in making a massive health drop every 10 seconds. You can
-    // remove this if you want, just make sure to remove lines 28-33 with it.
+    // This variable is just for use in making a massive health drop every 5 seconds. You can
+    // remove this if you want, just make sure to remove lines 37-40 with it.
     private float secondsSinceLastSpike = 0;
 
     // Start is called before the first frame update
@@ -22,14 +22,22 @@ public class PlayerAttributes : MonoBehaviour
     {
         // Decrements player's health by half a point every second, meaning they have 200 seconds (~3 minutes) to complete the level assuming they don't take damage.
         health -= Time.deltaTime;
-        // Heals armor by 2 points every second
-        armor += 2 * Time.deltaTime;
+        // Heals armor by 2 points every second unless at max
+        if(armor < 30) {
+            armor += 2 * Time.deltaTime;
+        }
 
-        // making a massive health drop every ten seconds for testing puposes
+        // damage health if the armor health is less than zero
+        if (armor < 0) {
+            health += armor;
+            armor = 0;
+        }
+
+        // making a massive health drop every 5 seconds for testing puposes
         secondsSinceLastSpike += Time.deltaTime;
-        if (secondsSinceLastSpike >= 10) {
-            health -= 20;
-            secondsSinceLastSpike -= 10;
+        if (secondsSinceLastSpike >= 5) {
+            armor -= 20;
+            secondsSinceLastSpike -= 5;
         }
     }
 }
