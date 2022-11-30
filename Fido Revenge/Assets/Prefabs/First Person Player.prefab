@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8820574125889361341}
   - component: {fileID: 8820574125889361338}
   - component: {fileID: 6367005026121378332}
+  - component: {fileID: 369154994110596327}
   m_Layer: 0
   m_Name: First Person Player
   m_TagString: Untagged
@@ -69,6 +70,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 8820574125889361341}
   speed: 20
+  fallMultiplier: 2.5
+  jumpMultiplier: 2
   jumpForce: 3
   groundCheck: {fileID: 8820574125925653792}
   groundDistance: 0.4
@@ -89,6 +92,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   armor: 30
+  armorCount: 
+--- !u!114 &369154994110596327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8820574125889361343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 489067380e5a0ca4096e33f92f4582a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenPanel: {fileID: 0}
 --- !u!1 &8820574125925653795
 GameObject:
   m_ObjectHideFlags: 0

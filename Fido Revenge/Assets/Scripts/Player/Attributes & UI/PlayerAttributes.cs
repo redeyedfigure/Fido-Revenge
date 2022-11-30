@@ -44,15 +44,19 @@ public class PlayerAttributes : MonoBehaviour
 
         // making a massive health drop every 5 seconds for testing puposes
         secondsSinceLastSpike += Time.deltaTime;
-        if (secondsSinceLastSpike >= 5) {
+        if (secondsSinceLastSpike >= 2) {
             armor -= 20;
-            secondsSinceLastSpike -= 5;
+            secondsSinceLastSpike -= 2;
         }
 
         roundedHealth = System.Math.Round(health, 2);
         roundedArmor = System.Math.Round(armor, 1);
         healthCount = roundedHealth.ToString();
         armorCount = roundedArmor.ToString();
+
+        if (health < 0) {
+            
+        }
     }
 
     public bool Reload(float energy)
