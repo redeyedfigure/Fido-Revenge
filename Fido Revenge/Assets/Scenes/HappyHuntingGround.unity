@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &85056621
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 85056622}
+  m_Layer: 0
+  m_Name: GunEnd
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &85056622
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85056621}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.521, y: 0, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 174012491}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &85220420
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,6 +515,7 @@ GameObject:
   - component: {fileID: 174012494}
   - component: {fileID: 174012493}
   - component: {fileID: 174012492}
+  - component: {fileID: 174012496}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -502,7 +534,8 @@ Transform:
   m_LocalPosition: {x: 0.4500003, y: -0.47399998, z: 0.8099992}
   m_LocalScale: {x: 1, y: 0.37448, z: 0.3132}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 85056622}
   m_Father: {fileID: 2076837797}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -569,6 +602,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 174012490}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &174012496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174012490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04033860828ac4843a3770254bc6a4e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunDamage: 1
+  weaponRange: 50
+  hitForce: 100
+  weaponRecoil: 50
+  fireRate: 0.25
+  gunEnd: {fileID: 85056622}
 --- !u!1 &215725650
 GameObject:
   m_ObjectHideFlags: 0
@@ -1593,17 +1644,6 @@ RectTransform:
   m_AnchoredPosition: {x: -189.4, y: 41.3}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1350006981 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6367005026121378332, guid: 2ff7264220d454b4bb811acfdb9cc638, type: 3}
-  m_PrefabInstance: {fileID: 1250932992}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 301f71eed2d78f74bb5b836d1220e360, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1350273239
 GameObject:
   m_ObjectHideFlags: 0
@@ -2217,7 +2257,6 @@ GameObject:
   - component: {fileID: 2038533884}
   - component: {fileID: 2038533883}
   - component: {fileID: 2038533882}
-  - component: {fileID: 2038533881}
   m_Layer: 5
   m_Name: PlayerHUDCanvas
   m_TagString: Untagged
@@ -2225,24 +2264,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2038533881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2038533880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 361706fa1a756f34985e216d02ac67d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthFillSlider: {fileID: 1350273243}
-  healthInterpSlider: {fileID: 1965631128}
-  armorFillSlider: {fileID: 1690080121}
-  armorFillImage: {fileID: 2015376743}
-  playerAttributes: {fileID: 1350006981}
-  healthCounter: {fileID: 1330692662}
 --- !u!114 &2038533882
 MonoBehaviour:
   m_ObjectHideFlags: 0
