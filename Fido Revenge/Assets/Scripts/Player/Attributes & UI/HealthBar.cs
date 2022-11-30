@@ -32,8 +32,8 @@ public class HealthBar : MonoBehaviour
         armorOpacity = (int)(armorFillSlider.value * 8);
         armorTextOpacity = 255 - armorOpacity;
 
-        armorFillImage.color = new Color32(255,255,255,(byte)armorOpacity);
-        armorCounter.color = new Color32(255,255,255,(byte)armorTextOpacity);
+        armorFillImage.color = new Color32(100,200,255,(byte)armorOpacity);
+        armorCounter.color = new Color32(100,200,255,(byte)armorTextOpacity);
 
         healthCounter.text = playerAttributes.healthCount;
         armorCounter.text = playerAttributes.armorCount;
