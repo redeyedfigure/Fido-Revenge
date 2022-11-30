@@ -4,14 +4,21 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Game Objects")]
     public CharacterController controller;
+    public Shooting shootingScript;
 
-    public float speed;
+    [Header("Player Stats")]
+    public float regularSpeed = 10f;
+    public float aimingSpeed = 6f;
     public readonly float GRAVITY = -9.81f;
     public float fallMultiplier = 2.5f;
     public float jumpMultiplier = 2f;
     public float jumpForce;
 
+    private float currentSpeed;
+
+    [Header ("Ground Checking")]
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
@@ -19,13 +26,18 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
     
-    void Start()
-    {
-        
-    }
 
     void Update()
     {
+        if(shootingScript.isAiming)
+        {
+            currentSpeed = aimingSpeed;
+        }
+        else
+        {
+            currentSpeed = regularSpeed;
+        }
+
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if(isGrounded && velocity.y < 0)
@@ -37,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
         float z = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * x + transform.forward * z;
-        controller.Move(move * speed * Time.deltaTime);
+        controller.Move(move * currentSpeed * Time.deltaTime);
         
         velocity.y += GRAVITY * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);

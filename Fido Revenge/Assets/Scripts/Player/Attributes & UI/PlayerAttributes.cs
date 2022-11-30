@@ -11,6 +11,7 @@ public class PlayerAttributes : MonoBehaviour
     //Visualization Necessities
     [System.NonSerialized]
     public string healthCount;
+    [System.NonSerialized]
     public string armorCount;
     private double roundedHealth;
     private double roundedArmor;
@@ -52,5 +53,27 @@ public class PlayerAttributes : MonoBehaviour
         roundedArmor = System.Math.Round(armor, 1);
         healthCount = roundedHealth.ToString();
         armorCount = roundedArmor.ToString();
+    }
+
+    public bool Reload(float energy)
+    {
+        if((health - energy) > 0)
+        {
+            return true;
+            
+        }
+        else if ((health - energy) <= 0)
+        {
+            return false;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public void ReloadEffects(float energy)
+    {
+        health = health - energy;
     }
 }
