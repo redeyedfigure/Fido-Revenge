@@ -29,6 +29,9 @@ public class Shooting : MonoBehaviour
     -Left Click triggers a shoot function
     -Player can click R to reload, and it costs the player energy to reload a hand of bullets.
     -This energy is taken out of the PlayerAttributes script.
+    -If enabled, then there is a range of accuracy for the bullet
+    -There is also aiming functionality: press 'right click' to aim, and it both slows down the player
+    (in the PlayerMovement script) as well as increases its accuracy.
     */
 
     //Public Gun Stats
