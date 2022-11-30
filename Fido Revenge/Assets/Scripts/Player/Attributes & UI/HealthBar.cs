@@ -10,9 +10,9 @@ public class HealthBar : MonoBehaviour
     public Slider healthInterpSlider;
     public Slider armorFillSlider;
     public Image armorFillImage;
-    private int armorOpacity;
+    private int armorOpacity, armorTextOpacity;
     public PlayerAttributes playerAttributes;
-    public TMP_Text healthCounter;
+    public TMP_Text healthCounter, armorCounter;
 
 
 
@@ -28,10 +28,16 @@ public class HealthBar : MonoBehaviour
         healthFillSlider.value = ToSingle(playerAttributes.health);
         healthInterpSlider.value -= (healthInterpSlider.value - healthFillSlider.value ) * Time.deltaTime * 2;
         armorFillSlider.value = playerAttributes.armor;
+        
         armorOpacity = (int)(armorFillSlider.value * 8);
+        armorTextOpacity = 255 - armorOpacity;
+
         armorFillImage.color = new Color32(255,255,255,(byte)armorOpacity);
+        armorCounter.color = new Color32(255,255,255,(byte)armorTextOpacity);
 
         healthCounter.text = playerAttributes.healthCount;
+        armorCounter.text = playerAttributes.armorCount;
+        
     }
 
     public static float ToSingle(double value)

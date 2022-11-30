@@ -11,10 +11,12 @@ public class PlayerAttributes : MonoBehaviour
     //Visualization Necessities
     [System.NonSerialized]
     public string healthCount;
+    public string armorCount;
     private double roundedHealth;
+    private double roundedArmor;
 
     // This variable is just for use in making a massive health drop every 5 seconds. You can
-    // remove this if you want, just make sure to remove lines 37-40 with it.
+    // remove this if you want.
     private float secondsSinceLastSpike = 0;
 
     // Start is called before the first frame update
@@ -47,6 +49,8 @@ public class PlayerAttributes : MonoBehaviour
         }
 
         roundedHealth = System.Math.Round(health, 2);
+        roundedArmor = System.Math.Round(armor, 1);
         healthCount = roundedHealth.ToString();
+        armorCount = roundedArmor.ToString();
     }
 }
