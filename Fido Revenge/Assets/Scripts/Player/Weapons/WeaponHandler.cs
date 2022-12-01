@@ -19,6 +19,8 @@ public class WeaponHandler : MonoBehaviour
         currentWeapon = weaponSet[0];
         availableWeapons = new bool[weaponSet.Length];
         availableWeapons[0] = true;
+        availableWeapons[1] = true;
+        availableWeapons[2] = true;
     }
 
     void Update()

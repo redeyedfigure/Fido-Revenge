@@ -283,7 +283,7 @@ MonoBehaviour:
   weaponRecoil: 50
   fireRate: 0.02
   shotCount: 1
-  automaticEnabled: 0
+  automaticEnabled: 1
   gunAudio: {fileID: 57252399}
   bulletSpread: 0.1
   aimedSpread: 0.05
@@ -882,6 +882,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6367005026121378332, guid: 2ff7264220d454b4bb811acfdb9cc638, type: 3}
+      propertyPath: health
+      value: 100000
+      objectReference: {fileID: 0}
     - target: {fileID: 6367005026121378332, guid: 2ff7264220d454b4bb811acfdb9cc638, type: 3}
       propertyPath: armorCount
       value: 
