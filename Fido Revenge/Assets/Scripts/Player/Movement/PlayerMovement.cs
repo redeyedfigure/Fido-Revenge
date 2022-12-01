@@ -25,6 +25,9 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 velocity;
     bool isGrounded;
+
+    [Header("Pick Ups")]
+    public LayerMask pickup;
     
 
     void Update()
