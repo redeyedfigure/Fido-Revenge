@@ -19,7 +19,9 @@ public class HealthBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        healthFillSlider.maxValue = (float)playerAttributes.health;
+        healthInterpSlider.maxValue = (float)playerAttributes.health;
+        armorFillSlider.maxValue = (float)playerAttributes.armor;
     }
 
     // Update is called once per frame
