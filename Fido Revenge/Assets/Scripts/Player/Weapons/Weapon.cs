@@ -20,7 +20,6 @@ public class Weapon : MonoBehaviour
     public AudioSource gunAudio;
 
     [Header("Spread & Aiming")]
-    public bool accuracyEnabled = true;
     public float bulletSpread = 0.5f;
     public float aimedSpread = 0.3f;
 
@@ -31,4 +30,6 @@ public class Weapon : MonoBehaviour
     public float reloadEnergy = 3f;
     //The maximum amount of bullets that a reload can provide.
     public int bulletLimit = 6;
+
+    public int currentBulletCount;
 }

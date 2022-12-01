@@ -8,15 +8,15 @@ public class WeaponHandler : MonoBehaviour
     //List of every available weapon
     public GameObject[] weaponSet;
     //Defines the currently used weapon
-    [NonSerialized]
     public GameObject currentWeapon;
     private int weaponChoice;
     //A bool that defines which weapons are currently available to the player
-    private bool[] availableWeapons;
+    public bool[] availableWeapons;
 
     void Start()
     {
         weaponChoice = 0;
+        currentWeapon = weaponSet[0];
         availableWeapons = new bool[weaponSet.Length];
         availableWeapons[0] = true;
     }
